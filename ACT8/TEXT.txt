@@ -1,0 +1,6 @@
+Los PNG pueden tener ALPHA, que indica nivel de opacidad del pixel, si es 0 es transparente si es 255 es visible.
+cv.IMREAD_UNCHANGED //se encarga de no cambiar el ALPHA
+
+La interpolacion para el resize se puede cambiar por una mas rapida ejecucion
+
+cuRectangle(Frame,(x,y),(x+w,y+h),(0,255,0),5) // el ultimo (5) es el grosor de la linea, si es -1 rellena el cuadro
