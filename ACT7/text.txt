@@ -1,0 +1,9 @@
+C:\Users\efrai\AppData\Local\Programs\Python
+
+C:\Program Files\Python38\Lib\site-packages\qt5_applications\Qt\bin\designer
+
+
+"code-runner.runTerminal": True,
+    "code-runner.saveFileBeforeRun": True,
+
+pyuic5 -x miPrimerGui.ui -o miPrimerGui.py
