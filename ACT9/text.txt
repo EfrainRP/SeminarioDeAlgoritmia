@@ -1,0 +1,10 @@
+Algoritmo de Prim
+
+Es el grafo que recorrera en el minimo costo o recorrido de un grafo entero, utilizado 
+para optimizar.
+
+Necesitamos una lista de vertices visitados
+y de arista ordenadas(ordena las aristas segun la cantidad que tengan).
+
+Se hace un ciclo repetido, se puede dejar o eliminar los elementos usados de la lista de aristas ordenadas.
+Mientras se va agregando la lista de vertices visitados
