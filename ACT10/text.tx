@@ -1,0 +1,18 @@
+Algoritmo de Kruscal
+Obtenemos el arbol de expasion minimo, no saca aristas ni caminos
+
+Utiles:
+Lista de arista ordenadas de menor a mayor
+
+
+G= nx.Graph() // crea un grafo
+G.add_node("A") //Se crea un nodo
+
+TAREA
+Hacer 10 vertices y 25 aristas
+el paquete de grafo ya tienen la funcion de Kruscal
+llamada parecida "minimum spanning tree"
+
+hacer dos ploit, original y kruscal 
+
+Sera 150 puntos si los vertices estan en el mismo lugar

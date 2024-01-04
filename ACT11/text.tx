@@ -1,0 +1,12 @@
+El algoritmo Dijkstra si nos muestra el camino mas corto del grafo.
+Ya que se guiara por el costo de las arista
+
+Este camino que encuentra es partir del VERTICE DE INICIO, por lo que si queremos conocer a partir de otro vertice 
+tendremos que hacerlo otra vez.
+
+Utiliza una fila ((cola)) de prioridad de acuerdo al costo, que sea el menor
+Se usa una lista vertices fijos para no mover sus costos, con el de la fila de prioridad
+
+
+Tarea
+Usar el codigo de busqueda y amplitud, aunque aplicando el Dijkstra
