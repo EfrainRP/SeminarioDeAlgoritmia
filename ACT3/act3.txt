@@ -1,0 +1,141 @@
+import sys
+print(sys.executable)# nos mostrara en donde esta instalado el ambiente.
+
+Si se cierras por otro lado y se vuelve a abrir, se puede llegar
+se queda en la BABA por lo que debemos de cerrar bien desde la IDE.
+
+ACT 3
+Para medir la eficacia, se usa con las iteraciones o con el tiempo tomado.
+Cuando sabemos que son muy rapidos o usamos el procesador de mas, se usa las iteraciones.
+for idx, x in enumerate(lista) # nos regresa una tupla de 2, indice de la lista
+                                y el elemento en la lista
+enumerate #enumera el arreglo
+
+metadata del video que hay que instalar
+    dict #es para escribir los datos del archivo
+    FFMpegWritter # nos crea el video con un fps que sea y sus metadatos
+
+    try{
+        #ponemos codigo que funciona "ERRORES ESPERADOS"
+    }catch(){# cachara la excepcion
+        #seguira con el codigo
+    }
+
+    with #try catch BONITO
+
+    plt.ion()#activacion de modo interactivo
+    linspace(x,y,a) # valor inicial, valor final, cantidad de arreglo a tener
+    time.time() # tiempo actual
+
+Arreglo negativo, es para especificar los ultimos elementos, -1 -> ultimo elementos
+
+ARR = [10,20,21,04,87,1000,1,2]
+ARR[:5]->[10,20,21,04,87]           ->valor inicial:limite superior
+ARR[5:]->[1000,1,2]                 -> [:] todo el arreglo
+ARR[2:6]->[21,04,87,100]            ---= [:-3] ->[10,20,21,04,87]
+
+    flushevents()#limpia cualquier evento que hicimos con teclado o mouse
+    grab_frame()#agarra un cuadro de imagen (24 frames) para el video
+
+Tarea para generar un video a youtube y el link ira en el reporte.
+Nosotros comparamos burbuja o burbuja mejorado vs merge.
+
+def mergeSort(lista,itMerge):
+    if len(lista) > 1:
+        mid = len(lista) // 2
+
+        left = lista[:mid]
+        right = lista[mid:]
+        
+        mergeSort(left,itMerge)
+        mergeSort(right,itMerge)
+        i, j , k = 0, 0, 0
+
+        while i < len(left) and j < len(right):
+            if left[i] <= right[j]:
+                lista[k] = left[i]
+                i += 1
+            else:
+                lista[k] = right[j]
+                j += 1
+            itMerge += 1
+            k += 1
+    
+        while i < len(left):
+            lista[k] = left[i]
+            i += 1
+            k += 1
+        while j < len(right):
+            lista[k] = right[j]
+            j += 1
+            k += 1
+    return itMerge
+
+
+
+
+    def mergeSort(lista,itMerge):
+    if len(lista) < 2:
+        return lista, itMerge
+
+    mid = len(lista) // 2
+    left, itMerge = mergeSort(lista[:mid],itMerge)
+    right, itMerge = mergeSort(lista[mid:],itMerge)
+    
+    i,j = 0,0
+    listaM = []
+    #Intercalacion
+    while i<len(right) and j < len(left):
+        if right[i] < left[i]:
+            listaM.append(rigth[i])
+            i+=1
+            itMerge+=1
+        else:
+            listaM.append(left[j])
+            j+=1
+    
+    listaM += right[i:]
+    listaM += left[j:]
+
+    return listaM, itMerge
+
+
+
+EL BUENO
+
+def mergeSort(lista,itMerge):
+    if len(lista) < 2:
+        return lista, 0
+
+    mid = len(lista) // 2
+
+    left, itMergeLeft = mergeSort(lista[:mid],itMerge)
+    right, itMergeRight = mergeSort(lista[mid:],itMerge)
+    lista, itMerge = merge_Sort(left,right)
+    itMerge += (itMergeLeft + itMergeRight)
+    return lista,itMerge
+
+def merge_Sort(left, right):
+    i, j, itMerge= 0, 0, 0
+    listaM = []
+    while i < len(left) and j < len(right):
+        if left[i] <= right[j]:
+            listaM.append(left[i])
+            i += 1
+            itMerge +=1
+        else:
+            listaM.append(right[j])
+            j += 1
+        #itMerge += (len(left)-i)
+
+    #listaM += left[i:]
+    #listaM += right[j:]
+    while i < len(left):
+        listaM.append(left[i])
+        i += 1
+        itMerge += 1
+    while j < len(right):
+        listaM.append(right[j])
+        j += 1
+        itMerge += 1
+    return listaM, itMerge 

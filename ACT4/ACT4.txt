@@ -1,0 +1,27 @@
+Algoritmo Kruscal
+
+Busqueda en profundidad:
+	Pila SON LIFO
+se usa una lista de visitados conforme se itera la pila para meter valores
+En el que va recorriendo por sus vecinos. De lo profundo, cuando no encuentre mas, se va por el vecino contrario.
+
+Busqueda en amplitrud:
+	Fila/Cola SON FIFO
+se usa la lista de visitados. En los que recorre de forma parecida al anterior pero usa una COLA/FILA para almacenar
+los valores del grafo. Siempre y cuando no se repitan valores segun la lista de visitados.
+Este saca por NIVELES, se amplia en anchura.
+
+
+::-1 , Voltea el arreglo
+
+TAREA
+es programar en amplitud, con el mismo codigo 
+screen del codigo (parte modificada, solo una pantalla) y los 4 mapas
+
+si podemos solo poner la ventana completa del mapa
+-mapa 1 con pronfundidad y amplitud
+-mapa 2 con pronfundidad y amplitud
+
+paquete:
+pgame
+
