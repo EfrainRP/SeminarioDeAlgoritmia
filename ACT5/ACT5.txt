@@ -1,0 +1,61 @@
+Procesamiento de imagenes (3 practicas)
+opencv      (conda install opencv, conda es mas para investigacion)
+es import cv2 as cv , por comodidad
+
+cv.imread("direccion de archivo",determinara la escala a mostrar) //para leer imagenes
+cv.imshow("nombre de la ventana",contenido de la variable) //poner siempre con cv.waitKey() para evitar fallas
+cv.waitKey() //espera a presionar una tecla antes de continuar
+
+np.shape //DIMENSIONES de la imagen
+
+rgb = OPENCV LO LEE AL REVES bgr
+
+cada arreglo del bgr tomora la intensidad respectivamente de su color
+np.maximum      max(0,-40) dara 40  o min(255,290) dara 255
+
+cv.merge ([,,,]) // combinara los arreglos en una sola
+
+Cuando el rgb tienen los mismo valores en cada uno se hara GRIS, entre mayor sera mas intenso "blanco"
+
+
+cv.resize (arreglo,x,y, "interpolaion")  //no es necesario la interpolacion ya que viene por default, nos inventamos pixeles para suavizar la imagen
+
+choise([0,255],[.5.5]) ///dice uno que valores quieres y su probabilidad
+
+Filtro de medias
+Debera de tener la ventana dimeciones IMPARES para localizar su centro. como 3x3,3x1
+Sacara el promedio de nuestro cuadro, de 3x3 es con 1/9     
+
+    el primer ciclo de for, mover el centro para el Filtro  
+            despues otro ciclo for para hacer su respectiva suma de toda la matriz de 3x3
+    aplicara el promedio, entre 9 de la suma resultante del ciclo anidado anterior
+
+EL DE 5X5 HACE PARECER MAS EL CONTONO QUE LOS CENTROS
+
+TAREA
+aplicar un filtro de Sobel O GAUSS, en escala de grises
+restricciones NO USAR FUNCIONES
+    filter
+    filter2d
+    gaussionFilter
+    borderFiltr
+    def
+    NO USAR UN PAQUETE 
+
+sobel, para detectar "bordes", detecta el cambio de intensidad
+    -1 0 1          se aplica a su area para hacer lo mismo que el codigo pero multiplicando por su respectivos valores
+    -2 0 2          y se suma el area para ponerlo en medio, tendremos solo una imagen con bordes
+    -1 0 1  Para bordes horizontales
+
+    -1 -2 -1    Detecta bordes verticales
+    0  0   0    da en blanco y negro, bordes negros y centro, o al reves
+    1  2   1
+
+campana de GAUSS
+sacar la desviacion estandar 
+    1   2   1       da una escala de grises , borrosa
+    2   5   2
+    1   2   1
+
+[[1,2,1],[2,5,2],[1,2,1]]  // tendremos que dividir entre 9, o podra venir en negativos
+

@@ -1,0 +1,35 @@
+cv.inRange // ciertos pixeles que cumplan nuestros requerimientos. los que si cumplen los pone en blanco en true(1 o 255)
+                  los que no los pone en cero
+
+a=[] // En python, es un tipo de dato lista
+
+la SUMA, UNION y la OR estan relacionados 
+Tambien la INTERSECCION, MULTIPLICACION y la AND estan relacionados
+cv.bitwise_and("imagen","imagen",mask=mask_inv) //aplicara uns "mascara" para tapar o cambiar ciertos pixeles de l mascara
+
+cv.add("imagen","imagen2") , nos juntara las imagenes
+
+TAREA
+Hacerlo con video, se grabara la pantalla
+
+REPORTE
+screenshot del codigo
+screenshot del video
+link de youtube
+
+con open cv     
+
+videoCapture(-----) "ruta del video o del stream"
+                ESTE "rstp:122.1.1.20" camara IP
+              O ESTE "0 ,1, 2,3" para captar video de camara WEB de USB o de la laptop
+while(true):
+cv.flip(frame,1) //funacion para guardar el frame en una variable
+meter el codigo del profe dentro del while de internet
+imshow()
+waitkey()Q  '52'
+    break
+
+    camera.release() //para liberar la camara
+
+
+
